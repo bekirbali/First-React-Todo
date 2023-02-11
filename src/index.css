@@ -1,0 +1,66 @@
+body {
+  background-color: #eaeaea;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  background-color: rgba(0, 255, 13, 0.667);
+  text-align: center;
+  width: 66%;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+form button {
+  background: none;
+  border: none;
+  padding: 0.4rem 1rem;
+  background-color: #dedede;
+  border-radius: 0.4rem;
+}
+
+form input {
+  border: none;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+}
+
+form input:focus {
+  outline: none;
+}
+
+ul {
+  width: 55%;
+  margin: 1rem auto;
+  list-style: circle;
+  list-style: none;
+  padding: 0.2rem;
+}
+
+li {
+  display: flex;
+  list-style: none;
+  justify-content: space-between !important;
+  background-color: rgb(59, 156, 140);
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+
+li button {
+  background: none;
+  border: none;
+}
