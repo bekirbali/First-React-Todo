@@ -9,15 +9,21 @@ function App() {
   const textHandler = (e) => {
     setNewItem(e.target.value);
   };
-  const item = {
-    id: new Date().getTime(),
-    text: newItem,
-  };
   const clickHandler = (e) => {
     e.preventDefault();
+    if (!newItem) {
+      alert("add todo");
+      return;
+    }
+    const item = {
+      id: new Date().getTime(),
+      text: newItem,
+    };
 
     setItems((oldItems) => [...oldItems, item]);
+    console.log(newItem);
     setNewItem("");
+    console.log(newItem);
   };
 
   const deleteHandler = (id) => {
@@ -28,7 +34,11 @@ function App() {
   return (
     <div className="app">
       <h1>Todo List</h1>
-      <Form clickHandler={clickHandler} textHandler={textHandler} />
+      <Form
+        clickHandler={clickHandler}
+        textHandler={textHandler}
+        newItem={newItem}
+      />
       <ul>
         {items.map((element) => {
           return (
