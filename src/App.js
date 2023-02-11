@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
+import Form from "./components/Form";
 
 function App() {
   const [newItem, setNewItem] = useState("");
@@ -14,10 +15,6 @@ function App() {
   };
   const clickHandler = (e) => {
     e.preventDefault();
-    if (!newItem) {
-      alert("add item");
-      return;
-    }
 
     setItems((oldItems) => [...oldItems, item]);
     setNewItem("");
@@ -31,12 +28,7 @@ function App() {
   return (
     <div className="app">
       <h1>Todo List</h1>
-      <form action="">
-        <input type="text" onChange={textHandler} value={newItem} />
-        <button type="submit" onClick={clickHandler}>
-          Add
-        </button>
-      </form>
+      <Form clickHandler={clickHandler} textHandler={textHandler} />
       <ul>
         {items.map((element) => {
           return (
