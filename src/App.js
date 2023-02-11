@@ -21,9 +21,7 @@ function App() {
     };
 
     setItems((oldItems) => [...oldItems, item]);
-    console.log(newItem);
     setNewItem("");
-    console.log(newItem);
   };
 
   const deleteHandler = (id) => {
